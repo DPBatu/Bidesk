@@ -399,3 +399,7 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Kaynak kod: VS sablonundaki [Ll]og/ kurali bu klasorleri de disliyordu (klonda derleme kiriliyordu)
+!**/Services/Log/
+!**/CustomAttributes/Log/
