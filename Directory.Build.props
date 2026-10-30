@@ -1,0 +1,12 @@
+<Project>
+  <PropertyGroup>
+    <!--
+      NuGet güvenlik denetimini yalnızca DOĞRUDAN bağımlılıklara uygula.
+      Transitive paket advisory'leri (ör. Swashbuckle.AspNetCore -> Microsoft.OpenApi,
+      Hangfire.PostgreSql -> Newtonsoft.Json) NU1903 uyarısı üretiyor ve Package Manager
+      Console'da Add-Migration'ı ErrorActionPreference=Stop yüzünden durduruyordu.
+      "direct" modu doğrudan referansları denetlemeye devam eder; transitive olanları atlar.
+    -->
+    <NuGetAuditMode>direct</NuGetAuditMode>
+  </PropertyGroup>
+</Project>
